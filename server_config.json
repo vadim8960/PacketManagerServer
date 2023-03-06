@@ -1,0 +1,27 @@
+{
+  "listeners": [
+    {
+      "address": "0.0.0.0",
+      "port": 3000,
+      "https": false
+    }
+  ],
+  "app": {
+    "number_of_threads": 8,
+    "server_header_field": ""
+  },
+  "db_clients": [
+    {
+      "name": "database",
+      "rdbms": "postgresql",
+      "host": "0.0.0.0",
+      "port": 5432,
+      "dbname": "postgres",
+      "user": "postgres",
+      "passwd": "postgres",
+      "is_fast": false,
+      "connection_number": 1,
+      "filename": ""
+    }
+  ]
+}
