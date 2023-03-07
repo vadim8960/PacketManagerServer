@@ -7,15 +7,8 @@
 
 void v1::User::test(const drogon::HttpRequestPtr &req, std::function<void(const HttpResponsePtr &)> &&callback,
                           const std::string &val) {
-    auto db = app().getDbClient("database");
 
-
-    auto dbreq = SqlReader::readSqlScript("/home/vadim/programs/cpp/PacketManagerServer/migrations/db.sql");
-
-    for (auto &com : dbreq) {
-        db->execSqlSync(com);
-    }
-
+    auto db = drogon::app().getDbClient("database");
     auto db_res = db->execSqlSync("select * from _packets;");
 
     Json::Value retv;

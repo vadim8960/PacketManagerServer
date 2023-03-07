@@ -10,7 +10,7 @@
 
 class SqlReader {
 public:
-    static std::vector<std::string> readSqlScript(const std::string& script_path);
+    static std::vector<std::string> read(const std::string& script_path);
 };
 
 
