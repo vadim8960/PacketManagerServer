@@ -14,7 +14,7 @@ class AppDestroyer {
 private:
     App *_app;
 public:
-    void initialize(App *app);
+    void init(App *app);
 
     ~AppDestroyer();
 };

@@ -9,17 +9,15 @@
 
 using namespace drogon;
 
-namespace v1 {
-    class User : public drogon::HttpController<User> {
-    public:
-        METHOD_LIST_BEGIN
-            METHOD_ADD(User::test, "/{1}", Get);
-        METHOD_LIST_END
+class packets_api : public drogon::HttpController<packets_api> {
+public:
+    METHOD_LIST_BEGIN
+        METHOD_ADD(packets_api::get_packet_by_name, "/{1}", Get);
+    METHOD_LIST_END
 
-        void test(const HttpRequestPtr &req,
-                  std::function<void(const HttpResponsePtr &)> &&callback,
-                  const std::string &val);
-    };
-}
+    void get_packet_by_name(const HttpRequestPtr &req,
+                            std::function<void(const HttpResponsePtr &)> &&callback,
+                            const std::string &name);
+};
 
 #endif //PACKETMANAGERSERVER_PACKETS_API_H

@@ -8,7 +8,7 @@
 App* App::_app = nullptr;
 AppDestroyer App::_app_destroyer;
 
-void AppDestroyer::initialize(App *app) {
+void AppDestroyer::init(App *app) {
     _app = app;
 }
 
@@ -33,7 +33,7 @@ void App::init() {
 App *App::getInstance() {
     if (!_app) {
         _app = new App;
-        _app_destroyer.initialize(_app);
+        _app_destroyer.init(_app);
         _app->init();
     }
     return _app;

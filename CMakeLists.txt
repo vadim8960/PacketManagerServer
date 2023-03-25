@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.23)
 project(PacketManagerServer)
 
 set(CMAKE_CXX_STANDARD 17)
-#set(USE_POSTGRESQL 1)
 
 add_subdirectory(libs)
 add_subdirectory(src)
