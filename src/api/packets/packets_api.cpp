@@ -30,7 +30,6 @@ void packets_api::get_packet_by_name(const drogon::HttpRequestPtr &req,
 
     retv["data"] = base64::to_base64(FileReader::read(libs[0]));
 
-
     auto resp = HttpResponse::newHttpJsonResponse(retv);
     callback(resp);
 }

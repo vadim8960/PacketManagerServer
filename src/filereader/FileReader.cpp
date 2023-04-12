@@ -8,9 +8,7 @@
 Line FileReader::read(const std::string &path) {
     std::ifstream in(path, std::ios::binary | std::ios::in);
     if (!in.is_open()) throw std::runtime_error("Error! Can't open file" + path);
-    Line res;
-    for (std::string line; std::getline(in, line); res += line);
-    return res;
+    return Line{std::istreambuf_iterator<char>(in), {}};
 }
 
 std::vector<Line> FileReader::readlines(const std::string &path) {
