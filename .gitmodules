@@ -1,3 +1,6 @@
 [submodule "libs/drogon"]
 	path = libs/drogon
 	url = git@github.com:drogonframework/drogon.git
+[submodule "libs/base64"]
+	path = libs/base64
+	url = git@github.com:vadim8960/base64.git
